@@ -7,7 +7,7 @@ compile:
 	
 	
 package:
-	makensis.exe /NOTIFYHWND 1117976 win-example.nsi
+	makensis /NOTIFYHWND 1117976 win-example.nsi
 	
 clean:
 	del /Q *.exe *.obj *.res
