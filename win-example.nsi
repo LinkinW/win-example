@@ -16,7 +16,7 @@ SetCompressor lzma
 ; MUI Settings
 !define MUI_ABORTWARNING
 !define MUI_ICON ".\icon.ico"
-!define MUI_UNICON ".\icon.ico"
+!define MUI_UNICON "${NSISDIR}\Contrib\Graphics\Icons\modern-uninstall.ico"
 
 ; Language Selection Dialog Settings
 !define MUI_LANGDLL_REGISTRY_ROOT "${PRODUCT_UNINST_ROOT_KEY}"
@@ -97,6 +97,8 @@ Section Uninstall
   Delete "$SMPROGRAMS\win-example\Uninstall.lnk"
   Delete "$SMPROGRAMS\win-example\Website.lnk"
   Delete "$SMPROGRAMS\win-example\win.lnk"
+  
+  Delete "$DESKTOP\win.lnk"
 
   RMDir "$SMPROGRAMS\win-example"
   RMDir "$INSTDIR"
