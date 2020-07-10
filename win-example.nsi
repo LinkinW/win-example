@@ -57,7 +57,7 @@ FunctionEnd
 Section "MainSection" SEC01
   SetOutPath "$INSTDIR"
   SetOverwrite ifnewer
-  File "F:\Code\windowsGUI\example\win.exe"
+  File ".\win.exe"
   CreateDirectory "$SMPROGRAMS\win-example"
   CreateShortCut "$DESKTOP\win.lnk" "$INSTDIR\win.exe"
 SectionEnd
